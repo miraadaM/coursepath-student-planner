@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cross the Ocean</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        //will be adapted in next part of project with node.js
+        const userName = document.getElementById("userName").value;
+        const password = document.getElementById("password").value;
+        function login(userName, Password){
+            alert("successful login ", userName, password);
+        }
+    </script>
+  </head>
+  <body>
+    <h1>Cross the Ocean</h1>
+
+        <nav class = "nav">
+          <a href="index.html">Home</a>
+        <a href = "profile.html"> Profile</a>
+        <a href = "courses.html"> Courses</a>
+        <a href = "requirements.html"> Requirements</a>
+    </nav>
+
+    <p>
+        Create account or log in to track your courses!
+    </p>
+
+    <img src = "Simmons_shark_logo.jpg" alt = "Simmons University cartoon shark logo">
+
+    <form>
+        <fieldset>
+        <legend>Login</legend>
+            <label for="userName">Username:</label>
+            <input type="text" id="userName" name="userName" required>
+            <label for = "password">Password:</label>
+            <input type = "password" id="password" name = "password" required>
+        <button onclick = "login()">Login</button>
+        </fieldset>
+    </form>
+   
+  </body>
+</html>
