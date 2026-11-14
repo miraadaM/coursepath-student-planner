@@ -1,0 +1,36 @@
+# Dependencies and generated files
+node_modules/
+dist/
+coverage/
+*.log
+npm-debug.log*
+
+# Private configuration (commit examples only)
+.env
+.env.*
+*.env
+!.env.example
+!.env.sample
+.npmrc
+
+# Credentials and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+credentials-*.json
+service-account*.json
+serviceAccount*.json
+
+# Local data and backups
+*.sqlite
+*.sqlite3
+*.db
+dump/
+backups/
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
