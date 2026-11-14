@@ -27,28 +27,6 @@ An Express/MongoDB prototype is included in `backend/`, but **the current fronte
 - npm, included with Node.js
 - Git
 
-```bash
-git clone https://github.com/miraadaM/coursepath-student-planner.git
-cd coursepath-student-planner/react-frontend
-npm ci
-npm run dev
-```
-
-Open the local address printed by Vite, normally `http://localhost:5173`.
-
-### Build and checks
-
-Run these commands inside `react-frontend/`:
-
-```bash
-npm run build     # Create the production build in dist/
-npm run preview   # Preview that build locally
-npm run lint      # Check the source code
-npm test          # Test tracking calculations and data validation
-```
-
-For hosting, serve `react-frontend/dist` and configure single-page application fallback to `index.html` so direct visits to `/courses`, `/requirements`, and `/plan` work.
-
 ## Using CoursePath
 
 1. Open **Requirements** and enter goals from your degree audit or advisor's checklist.
@@ -69,34 +47,7 @@ Data is saved under `course-tracker.v1` in browser storage. It is specific to th
 - There is currently no server backup, account login, or cross-device synchronization.
 - If storage is unavailable, the app shows a warning instead of silently claiming the data was saved.
 
-## Optional MongoDB backend
 
-This is a retained prototype, **not the backend used by the current React app**. It has no authentication or per-user ownership, and should remain local until those features are implemented. Its older static pages in `backend/public/` are separate from the redesigned React interface.
-
-To run the API for local development:
-
-```bash
-cd backend
-npm ci
-cp .env.example .env
-```
-
-Edit the private `.env` file with your database connection:
-
-```dotenv
-MONGO_URI=mongodb://127.0.0.1:27017/coursepath
-PORT=3000
-```
-
-The example uses a local MongoDB instance. For Atlas, put your own connection string in `.env`; never put credentials in source code, screenshots, or the README.
-
-```bash
-npm start
-# Or restart automatically during development:
-npm run dev
-```
-
-The API starts at `http://127.0.0.1:3000` after the database connects. The prototype supports listing, creating, reading, renaming, and deleting courses under `/api/courses`. The `/api/users` route is unfinished and is not a login system.
 
 ## Project structure
 
@@ -130,13 +81,7 @@ coursepath-student-planner/
 | Optional API | Node.js, Express, Mongoose, MongoDB |
 | Tests | Node.js built-in test runner |
 
-## Configuration and secrets
 
-- `.env` files, private keys, local databases, dependencies, and generated builds are excluded by `.gitignore`.
-- Only safe example environment files should be committed.
-- MongoDB configuration is read from `MONGO_URI`; connection credentials are not hard-coded.
-- Never place database credentials in `VITE_*` variables: frontend configuration is visible to visitors.
-- If a credential is ever committed, revoke or rotate it. Adding it to `.gitignore` does not remove it from Git history.
 
 ## Scope and future work
 
