@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="profile.html">Profile</a>
+  <a href="courses.html">Courses</a>
+  <a href="requirements.html">Requirements</a>
+</nav>
+<main>
+  <h1 >Cross The Ocean </h1>
+<h3>Progress</h3>
+<progress id="progressBar" value="0" max="32"></progress> <!-- from: https://www.w3schools.com/tags/tag_progress.asp -->
+
+<h2>Add Course</h2>
+
+<form id="courseForm">
+  <input type="text" id="courseName" placeholder="fill out in the following format: cs112" required>
+  <input type="text" id="requirement" placeholder="Requirement" required>
+  <select id="majorOrKsa" required>
+    <option value="">Is it major reqirement or KSA?</option>
+    <option value="Major">Major</option>
+    <option value="Ksa">Ksa</option>
+  </select>
+
+  <select id="status" required>
+    <option value="">Status</option>
+    <option value="completed">Completed</option>
+    <option value="planned">Planned</option>
+  </select>
+  <button type="submit">Add</button>
+</form>
+<div id="newCourseDiv"></div>
+
+<h3>Your Courses</h3>
+<h4>Search</h4>
+<input type="text" id="search" placeholder="Type course you want to find (this format: cs112)">
+<button id="searchBtn">Search</button>
+<ul id="courseList"></ul>
+
+
+<script src="js/script.js"></script>
+</main>
+</body>
+</html>
